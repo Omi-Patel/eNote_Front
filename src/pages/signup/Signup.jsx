@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from "react";
 // import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -16,6 +17,10 @@ function Signup() {
 
   // signup handle fuction
   const signupHandle = async () => {
+    if (!name || !email || !password) {
+      return toast.error("Please Provide The Data..!");
+    }
+
     //send data through api
     const res = await fetch(`https://enote-back.onrender.com/api/auth/signup`, {
       method: "POST",
@@ -54,7 +59,7 @@ function Signup() {
         </div>
 
         {/* Input 1 Name  */}
-        <div>
+        <div className="w-64">
           <input
             type="text"
             value={name}

@@ -39,30 +39,32 @@ function NotesCard() {
                     const { title, description, tag, _id } = item;
 
                     return (
-                      <>
+                      <div key={index} className=" mx-auto">
                         {/* Card 1 */}
-                        <div className="mb-3">
-                          <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-[#f9f9f964]">
+                        <div className="mb-3  ">
+                          <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-[#7b8f9476] lg:w-64 w-[320px] m-4">
                             <div className="p-6">
                               {/* title  */}
-                              <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                              <h1 className="title-font text-lg font-bold tracking-wide text-gray-900 mb-3">
                                 {title}
                               </h1>
+                              <hr />
 
                               {/* description  */}
-                              <p className="leading-relaxed mb-3 text-black">
+                              <p className="leading-relaxed mb-3 mt-2 font-semibold tracking-wide text-black">
                                 {description}
                               </p>
+                              {/* <hr /> */}
 
                               {/* bottom item  */}
-                              <div className="flex items-center  justify-between ">
+                              <div className="flex items-center mt-2 justify-between ">
                                 {/* left item  */}
-                                <div className=" bg-gray-200 px-5  rounded-xl inline-flex items-center md:mb-2 lg:mb-0">
+                                <div className=" bg-slate-200 px-5  rounded-xl inline-flex items-center md:mb-2 lg:mb-0 uppercase text-sm">
                                   {tag}
                                 </div>
 
                                 {/* right item  */}
-                                <div className=" flex items-center space-x-2">
+                                <div className=" flex items-center space-x-2 ">
                                   {/* edit icon  */}
 
                                   <Link to={`/notes/edit/${_id}`}>
@@ -73,7 +75,7 @@ function NotesCard() {
                                         viewBox="0 0 24 24"
                                         strokeWidth={1.5}
                                         stroke="currentColor"
-                                        className="w-6 h-6 cursor-pointer"
+                                        className="w-6 h-6 cursor-pointer text-green-700 "
                                       >
                                         <path
                                           strokeLinecap="round"
@@ -94,7 +96,7 @@ function NotesCard() {
                                       viewBox="0 0 24 24"
                                       strokeWidth={1.5}
                                       stroke="currentColor"
-                                      className="w-6 h-6 cursor-pointer"
+                                      className="w-6 h-6 cursor-pointer text-red-700"
                                     >
                                       <path
                                         strokeLinecap="round"
@@ -108,7 +110,7 @@ function NotesCard() {
                             </div>
                           </div>
                         </div>
-                      </>
+                      </div>
                     );
                   })
                 ) : (

@@ -1,4 +1,6 @@
+import React from "react";
 import { useState } from "react";
+
 // import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -15,6 +17,10 @@ function Login() {
 
   // loginHandle function
   const loginHandle = async () => {
+    if (!email || !password) {
+      return toast.error("Please Provide The Data..!");
+    }
+
     const res = await fetch(`https://enote-back.onrender.com/api/auth/login`, {
       method: "POST",
       headers: {
@@ -45,7 +51,7 @@ function Login() {
   return (
     <div className=" flex justify-center items-center h-screen">
       {/* main div  */}
-      <div className=" bg-[#d2cbbf] shadow-md px-10 py-10 rounded-xl ">
+      <div className=" bg-[#d2cbbf] shadow-md px-8 py-10 rounded-xl ">
         {/* Top Heading  */}
         <div className="">
           <h1 className="text-center text-black text-xl mb-4 font-bold">
@@ -54,7 +60,7 @@ function Login() {
         </div>
 
         {/* Input 1 Email  */}
-        <div>
+        <div className="w-64">
           <input
             type="email"
             value={email}

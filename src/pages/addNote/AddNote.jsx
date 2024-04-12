@@ -22,8 +22,8 @@ function AddNote() {
             {/* Input 1  */}
             <div>
               <input
-              value={title}
-              onChange={(e)=>setTitle(e.target.value)}
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
                 type="text"
                 name="title"
                 className="inputShadow
@@ -35,8 +35,8 @@ function AddNote() {
             {/* Input 2  */}
             <div>
               <input
-              value={tag}
-              onChange={(e)=>setTag(e.target.value)}
+                value={tag}
+                onChange={(e) => setTag(e.target.value)}
                 type="text"
                 name="tag"
                 className="inputShadow
@@ -48,8 +48,8 @@ function AddNote() {
             {/* TextArea 3  */}
             <div>
               <textarea
-              value={description}
-              onChange={(e)=>setDescription(e.target.value)}
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
                 name=""
                 id=""
                 cols="30"
@@ -63,7 +63,7 @@ function AddNote() {
             {/* Button  */}
             <div className=" flex justify-center mb-3">
               <button
-              onClick={addNote}
+                onClick={addNote}
                 className=" bg-[#000000] w-full text-white font-bold  px-2 
                                 py-2.5 rounded-md"
               >
