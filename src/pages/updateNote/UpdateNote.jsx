@@ -22,7 +22,7 @@ function UpdateNote() {
   // get note by id
   const getNotesById = async () => {
     const res = await fetch(
-      `https://enote-back.onrender.com/api/notes/notes/${id}`,
+      `https://enote-back-1.onrender.com/api/notes/notes/${id}`,
       {
         method: "GET",
         headers: {
@@ -48,7 +48,7 @@ function UpdateNote() {
   const updateNote = async () => {
     try {
       const res = await fetch(
-        `https://enote-back.onrender.com/api/notes/updatenote/${id}`,
+        `https://enote-back-1.onrender.com/api/notes/updatenote/${id}`,
         {
           method: "PUT",
           headers: {

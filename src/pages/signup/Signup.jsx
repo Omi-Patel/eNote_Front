@@ -22,7 +22,7 @@ function Signup() {
     }
 
     //send data through api
-    const res = await fetch(`https://enote-back.onrender.com/api/auth/signup`, {
+    const res = await fetch(`https://enote-back-1.onrender.com/api/auth/signup`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

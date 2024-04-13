@@ -15,7 +15,7 @@ function myState(props) {
     setLoading(true);
 
     try {
-      const res = await fetch(`https://enote-back.onrender.com/api/notes/fetchallnotes`, {
+      const res = await fetch(`https://enote-back-1.onrender.com/api/notes/fetchallnotes`, {
         method: "GET",
         headers: {
           "content-type": "application/json",
@@ -41,7 +41,7 @@ function myState(props) {
   const [tag, setTag] = useState("");
 
   const addNote = async () => {
-    const res = await fetch(`https://enote-back.onrender.com/api/notes/addnote`, {
+    const res = await fetch(`https://enote-back-1.onrender.com/api/notes/addnote`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -72,7 +72,7 @@ function myState(props) {
   //delete note
   const deleteNote = async (id) => {
     const res = await fetch(
-      `https://enote-back.onrender.com/api/notes/deletenote/${id}`,
+      `https://enote-back-1.onrender.com/api/notes/deletenote/${id}`,
       {
         method: "DELETE",
         headers: {

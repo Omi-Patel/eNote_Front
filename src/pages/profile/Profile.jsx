@@ -9,7 +9,7 @@ function Profile() {
   const [user, setUser] = useState([]);
 
   const userData = async () => {
-    const res = await fetch(`https://enote-back.onrender.com/api/auth/getuser`, {
+    const res = await fetch(`https://enote-back-1.onrender.com/api/auth/getuser`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

@@ -21,7 +21,7 @@ function Login() {
       return toast.error("Please Provide The Data..!");
     }
 
-    const res = await fetch(`https://enote-back.onrender.com/api/auth/login`, {
+    const res = await fetch(`https://enote-back-1.onrender.com/api/auth/login`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
